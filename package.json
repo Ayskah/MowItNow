@@ -4,7 +4,7 @@
   "description": "Parse an input file specifying grasspatchs and associated moans + their instructions",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "node index.js -f=input.txt",
     "test": "jest --verbose --silent",
     "lint": "eslint --init"
   },
