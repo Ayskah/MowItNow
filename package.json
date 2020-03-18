@@ -1,0 +1,29 @@
+{
+  "name": "mowitnow",
+  "version": "1.0.0",
+  "description": "Parse an input file specifying grasspatchs and associated moans + their instructions",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "jest --verbose --silent",
+    "lint": "eslint --init"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ayskah/MowItNow.git"
+  },
+  "author": "VGU",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ayskah/MowItNow/issues"
+  },
+  "homepage": "https://github.com/Ayskah/MowItNow#readme",
+  "dependencies": {
+    "chalk": "^3.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-google": "^0.14.0",
+    "jest": "^25.1.0"
+  }
+}
