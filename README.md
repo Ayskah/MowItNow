@@ -1,3 +1,12 @@
+# Run
+
+1. npm install
+2. 
+    - Tests
+    `npm test`
+    - Run with the input.txt file instructions
+    `npm run`
+
 # MowItNow
 La société MowItNow a décidé de développer une tondeuse à gazon automatique, destinée aux
 surfaces rectangulaires.
