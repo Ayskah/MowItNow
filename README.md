@@ -3,7 +3,8 @@
 1. `npm install`
 2. 
     - Tests: `npm test`
-    - Prod, using input.txt: `npm run`
+    - Prod, using input.txt defined in package.json: `npm run`
+    - Prod, using a custom input file defined in -f: `node index.js -f=aFileName`
 
 # MowItNow
 La société MowItNow a décidé de développer une tondeuse à gazon automatique, destinée aux
