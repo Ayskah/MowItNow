@@ -1,5 +1,5 @@
 const Mown = require("./mown");
-const GrassPatch = require("./grasspath");
+const GrassPatch = require("./grasspatch");
 jest.mock("./mown");
 afterEach(() => {
 	Mown.mockClear();
