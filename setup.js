@@ -23,8 +23,19 @@ class Setup {
 		verbose.displayTitle("File parsing");
 		this.grasspatchs = [];
 		try {
+			for (const arg of process.argv) {
+				if (/-f=/.test(arg)) {
+					this.fileNameArg = "./"+arg.match(/-f=(.*)/)[1];
+				}
+			}
+			if (!this.fileNameArg) verbose.printNOK("Input file is not defined") || process.exit();
+			try {
+				this.rawFile = fs.readFileSync(this.fileNameArg, { encoding: "utf-8" });
+			} catch (e) {
+				verbose.printNOK("File error: " + e.stack);
+				process.exit();
+			}
 			// Step 1: line parsing and san
-			this.rawFile = fs.readFileSync("./input.txt", { encoding: "utf-8" });
 			this.parsedFile = this.rawFile.split(/\n/).map((_) => _.replace(/\r|\n/, ""));
 			this.totalMownsCount = (_) =>
 				this.grasspatchs.map(
