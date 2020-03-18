@@ -1,6 +1,6 @@
-const Mown = require("./mown");
-const GrassPatch = require("./grasspatch");
-jest.mock("./mown");
+const Mown = require("../mown");
+const GrassPatch = require("../grasspatch");
+jest.mock("../mown");
 afterEach(() => {
 	Mown.mockClear();
 });

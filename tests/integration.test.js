@@ -1,5 +1,5 @@
-const Mown = require("./mown");
-const GrassPatch = require("./grasspatch");
+const Mown = require("../mown");
+const GrassPatch = require("../grasspatch");
 beforeEach(() => {
 	jest.spyOn(process.stdout, "write").mockImplementation(() => { });
 });
