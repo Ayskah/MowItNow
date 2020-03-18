@@ -1,6 +1,6 @@
 # Run
 
-1. npm install
+1. `npm install`
 2. 
     - Tests: `npm test`
     - Prod, using input.txt: `npm run`
