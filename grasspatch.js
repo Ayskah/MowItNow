@@ -29,15 +29,11 @@ class GrassPatch {
 	 */
 	async activateMowns() {
 		return new Promise(async (resolve, reject) => {
-			try {
-				verbose.printMEH("\n----------------");
-				verbose.printMEH(`\n-> Activating ${this.mowns.length} mowns on a ${this.x}-${this.y} patch`);
-				verbose.printMEH("\n----------------");
-				for (const aMown of this.mowns) await aMown.activate(this);
-				resolve();
-			} catch (e) {
-				reject(e);
-			}
+			verbose.printMEH("\n----------------");
+			verbose.printMEH(`\n-> Activating ${this.mowns.length} mowns on a ${this.x}-${this.y} patch`);
+			verbose.printMEH("\n----------------");
+			for (const aMown of this.mowns) await aMown.activate(this);
+			resolve();
 		});
 	}
 }

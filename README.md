@@ -1,10 +1,11 @@
+![CI](https://github.com/Ayskah/MowItNow/workflows/CI/badge.svg?branch=master) - 
+[![Coverage Status](https://coveralls.io/repos/github/Ayskah/MowItNow/badge.svg?branch=master)](https://coveralls.io/github/Ayskah/MowItNow?branch=master)
+
 # Run
 
 1. `npm install`
-2. 
-    - Tests: `npm test`
-    - Prod, using input.txt defined in package.json: `npm run`
-    - Prod, using a custom input file defined in -f: `node index.js -f=aFileName`
+2. Using input file "input.txt" defined in package.json: `npm run`
+3. Using a custom input file defined in -f: `node index.js -f=aFileName`
 
 # MowItNow
 La société MowItNow a décidé de développer une tondeuse à gazon automatique, destinée aux

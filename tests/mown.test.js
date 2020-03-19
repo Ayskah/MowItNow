@@ -19,6 +19,12 @@ test("Should create a mown", () => {
 	expect(mown.posy).toBe(0);
 	expect(mown.orientation).toBe("N");
 });
+test("Should create a mown with default params", () => {
+	const mown = new Mown();
+	expect(mown.posx).toBe(0);
+	expect(mown.posy).toBe(0);
+	expect(mown.orientation).toBe("N");
+});
 test("Should rotate a mown from N to W", () => {
 	const mown = new Mown({
 		grasspatch: new GrassPatch(),
@@ -58,4 +64,18 @@ test("Should move a mown from y=0 to y=1", () => {
 		orientation: "N",
 	}).move(new GrassPatch());
 	expect(mown.posy).toBe(1);
+});
+test("Should crash a mown because of wrong instruction", async () => {
+	const mown = new Mown({
+		grasspatch: new GrassPatch(),
+		posx: 0,
+		posy: 0,
+		orientation: "N",
+		instructions: "GAGAGAGBA",
+	});
+	try {
+		await mown.activate(new GrassPatch());
+	} catch (e) {
+		expect(e.message).toMatch("Instruction error: B");
+	}
 });
