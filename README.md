@@ -3,7 +3,7 @@
 
 # Run
 
-1. `npm install`
+1. `npm install (--only=prod)`
 2. Using input file "input.txt" defined in package.json: `npm run`
 3. Using a custom input file defined in -f: `node index.js -f=aFileName`
 
