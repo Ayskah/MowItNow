@@ -32,23 +32,15 @@ y+1).
 
 Pour programmer la tondeuse, on lui fournit un fichier d'entrée construit comme suit :
 
-● La première ligne correspond aux coordonnées du coin supérieur droit de la pelouse, celles
-du coin inférieur gauche sont supposées être (0,0)
+● La première ligne correspond aux coordonnées du coin supérieur droit de la pelouse, celles du coin inférieur gauche sont supposées être (0,0)
 
-● La suite du fichier permet de piloter toutes les tondeuses qui ont été déployées. Chaque
-tondeuse a deux lignes la concernant :
+● La suite du fichier permet de piloter toutes les tondeuses qui ont été déployées. Chaque tondeuse a deux lignes la concernant :
 
-    ● la première ligne donne la position initiale de la tondeuse, ainsi que son orientation. La
-position et l'orientation sont fournies sous la forme de 2 chiffres et d’une lettre, séparés
-par un espace
+    ● la première ligne donne la position initiale de la tondeuse, ainsi que son orientation. La position et l'orientation sont fournies sous la forme de 2 chiffres et d’une lettre, séparés par un espace
 
-    ● la seconde ligne est une série d'instructions ordonnant à la tondeuse d'explorer la
-pelouse. Les instructions sont une suite de caractères sans espaces.
-Chaque tondeuse se déplace de façon séquentielle, ce qui signifie que la seconde tondeuse ne
-bouge que lorsque la première a exécuté intégralement sa série d'instructions.
+    ● la seconde ligne est une série d'instructions ordonnant à la tondeuse d'explorer la pelouse. Les instructions sont une suite de caractères sans espaces. Chaque tondeuse se déplace de façon séquentielle, ce qui signifie que la seconde tondeuse ne bouge que lorsque la première a exécuté intégralement sa série d'instructions.
 
-Lorsqu'une tondeuse achève une série d'instruction, elle communique sa position et son
-orientation.
+-> Lorsqu'une tondeuse achève une série d'instruction, elle communique sa position et son orientation.
 
 ### OBJECTIF
 Concevoir et écrire un programme dans un des langages suivants : Java, Scala, Kotlin,
