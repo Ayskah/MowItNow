@@ -91,9 +91,11 @@ class Mown {
 	}
 	/**
 	 * @description Emit the mown position
+	 * @return {String} x y orientation
 	 */
 	emitPosition() {
 		verbose.printOK(`\t-> Mown @ ${this.posx}-${this.posy} towards ${this.orientation}`);
+		return `${this.posx} ${this.posy} ${this.orientation}`;
 	}
 }
 module.exports = Mown;
