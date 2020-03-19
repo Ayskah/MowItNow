@@ -64,7 +64,7 @@ class Mown {
 			// Move
 			else if (/A/.test(instruction)) this.move(grassPatch);
 			// Unknown
-			else reject(new Error("Instruction error"));
+			else reject(new Error("Instruction error: " + instruction));
 			// If we're there, we've correctry processed the instruction
 			resolve();
 		});
@@ -79,10 +79,9 @@ class Mown {
 			for (let [i, instruction] of this.instructions.split("").entries()) {
 				await new Promise((resolve) => setTimeout(resolve, 50)).then(async () => {
 					verbose.printMEH(`\t-> ${(i += 1)}/${this.instructions.length} instructions\r`);
-					this.process(instruction, grassPatch).catch((e) => {
-						verbose.printNOK("\n\t-> Instruction error: " + instruction);
-						reject(new Error("Instruction error: " + instruction));
-						process.exit();
+					await this.process(instruction, grassPatch).catch((e) => {
+						verbose.printNOK(e.message);
+						reject(e);
 					});
 				});
 			}

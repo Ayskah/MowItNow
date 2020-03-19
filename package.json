@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js -f=input.txt",
-    "test": "jest --verbose --silent",
+    "test": "jest --verbose --silent --coverage=true",
     "lint": "eslint --init"
   },
   "repository": {

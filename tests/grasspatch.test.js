@@ -19,7 +19,20 @@ test("Should add a mown on a grasspatch", () => {
 	const grassPatch = new GrassPatch({
 		x: 5,
 		y: 5,
-	})
-		.addMown(new Mown());
+	}).addMown(new Mown());
 	expect(grassPatch.mowns.length).toBe(1);
+});
+test("Should crash when activating a wrong mown instruction", async () => {
+	const grassPatch = new GrassPatch();
+	grassPatch.addMown(new Mown({
+		posx: 0,
+		posy: 0,
+		orientation: "N",
+		instructions: "B",
+	}));
+	try {
+		await grassPatch.activateMowns().throw();
+	} catch (e) {
+		console.log(e);
+	}
 });
