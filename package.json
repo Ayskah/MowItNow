@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js -f=input.txt",
-    "test": "jest --verbose --silent --coverage=true",
+    "test": "jest  --verbose --silent --coverage --coverageReporters=text-lcov | coveralls",
     "lint": "eslint --init"
   },
   "repository": {
@@ -22,6 +22,7 @@
     "chalk": "^3.0.0"
   },
   "devDependencies": {
+    "coveralls": "^3.0.9",
     "eslint": "^6.8.0",
     "eslint-config-google": "^0.14.0",
     "jest": "^25.1.0"
