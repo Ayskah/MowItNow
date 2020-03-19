@@ -1,4 +1,4 @@
-![CI](https://github.com/Ayskah/MowItNow/workflows/CI/badge.svg?branch=master) - 
+![CI](https://github.com/Ayskah/MowItNow/workflows/CI/badge.svg?branch=master) 
 [![Coverage Status](https://coveralls.io/repos/github/Ayskah/MowItNow/badge.svg?branch=master)](https://coveralls.io/github/Ayskah/MowItNow?branch=master)
 
 # Run
